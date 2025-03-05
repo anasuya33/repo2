@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment 
 {
-MAVEN_HOME = "Hello, Jenkins!"
+MAVEN_HOME=h
 }
  {
 stage ('1')
@@ -18,7 +18,7 @@ sh ' git clone https://github.com/RavitejaAdepudi/javawar.git'
 {
 steps
 {
-sh ' mvn -f /var/lib/jenkins/workspace/abcd4/javawar/pom.xml install '
+sh ' mvn -f /var/lib/jenkins/workspace//javawar/pom.xml install '
 }
 }
   stage ('3')
