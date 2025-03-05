@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    environment {
+       MAVEN_HOME = "Hello, Jenkins!"
+       }
+    stages {
+        stage('Print Variables') {
+            steps {
+                script {
+                    echo "MY_VAR: ${env.MY_VAR}"
+                    echo "API_URL: ${env.API_URL}"
+                }
+            }
+        }
+    }
+}
